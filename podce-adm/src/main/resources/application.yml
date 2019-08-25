@@ -11,7 +11,7 @@ timeout.db: @timeout.db@
 
 dialect.db: org.hibernate.dialect.PostgreSQLDialect
 data.source.db: org.postgresql.ds.PGSimpleDataSource
-hbm2dll: update
+hbm2dll: none
 
 spring:
   profiles:

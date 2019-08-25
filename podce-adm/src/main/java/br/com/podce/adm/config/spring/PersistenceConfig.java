@@ -117,7 +117,7 @@ public class PersistenceConfig {
         properties.setProperty("hibernate.hbm2ddl.auto", HBM2DLL);
         properties.setProperty("hibernate.show_sql", "false");
         properties.setProperty("hibernate.temp.use_jdbc_metadata_defaults", "false");
-        properties.setProperty("hibernate.default_schema", "podce");
+        properties.setProperty("hibernate.default_schema", "cerimonial");
         return properties;
     }
 
