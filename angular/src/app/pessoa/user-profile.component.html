@@ -1,0 +1,291 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card p-4">
+        <div class="card-header">
+          <h5 class="title"><i class="fa fa-user-circle" aria-hidden="true"></i> Dados Basicos </h5>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-md-5 pr-1">
+                <div class="form-group w-100">
+                  <label>Nome Completo</label>
+                  <input type="text" class="form-control" placeholder="Nome Completo" [(ngModel)]="pessoa.nomeCompleto" [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+              <div class="col-md-5 pl-1">
+                <div class="form-group w-100">
+                  <label>Nome Usual</label>
+                  <input type="text" class="form-control" placeholder="Nome Usual" [(ngModel)]="pessoa.nomeUsual" [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+              <div class="col-md-2 pl-1">
+                <div class="form-group mt-3 pt-3">
+                  <input id="isUsual" type="checkbox" class="form-check-radio"  [(ngModel)]="pessoa.utilizarNomeUsual" [ngModelOptions]="{standalone: true}">
+                  <label for="isUsual" class="ml-1"> Utilizar Nome usual</label>&nbsp;&nbsp;
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4 pr-1">
+                <div class="form-group">
+                  <label>CPF</label>
+                  <input type="text" class="form-control" placeholder="CPF" value="">
+                </div>
+              </div>
+              <div class="col-md-4 pr-1">
+                <div class="form-group">
+                  <label for="genero">Genero</label>
+                  <select class="form-control" id="genero">
+                    <option></option>
+                    <option>Masculino</option>
+                    <option>Feminino</option>
+                    <option>Não Definido</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4 pl-1">
+                <label>Data de Nascimento</label>
+                <input type="date" class="form-control" value="">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4 pr-1">
+                <div class="form-group">
+                  <label>Nacionalidade</label>
+                  <input type="text" class="form-control" placeholder="Nacionalidade" value="">
+                </div>
+              </div>
+              <div class="col-md-4 pr-1">
+                <div class="form-group">
+                  <label for="documento">Documento</label>
+                  <select class="form-control" id="documento">
+                    <option></option>
+                    <option>RG</option>
+                    <option>CPF</option>
+                    <option>CTPS</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4 pl-1">
+                <label>Número do Documento</label>
+                <input type="text" class="form-control" value="">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4 pr-1">
+                <div class="form-group">
+                  <label for="Tratamento">Tratamento</label>
+                  <select class="form-control" id="Tratamento">
+                    <option></option>
+                    <option>Vossa Senhoria</option>
+                    <option>Vossa Excelencia</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4 pr-1">
+                <div class="form-group">
+                  <label for="vocativo">Vocativo</label>
+                  <select class="form-control" id="vocativo">
+                    <option></option>
+                    <option>O Senhor</option>
+                    <option>A Senhora</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4 pl-1">
+                <label for="titulo">Titulo</label>
+                <select class="form-control" id="titulo">
+                  <option></option>
+                  <option>Advogado</option>
+                  <option>Doutor</option>
+                  <option>Mestre</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>Login</label>
+                  <input type="text" class="form-control" placeholder="Login" [(ngModel)]="pessoa.login" [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input name="email" id="email" type="email" class="form-control" placeholder="Email">
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Sobre Mim</label>
+                  <textarea rows="4" cols="80" class="form-control" placeholder="Fale um pouco sobre a pessoa" [(ngModel)]="pessoa.sobre" [ngModelOptions]="{standalone: true}"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-5">
+              <div class="col-md-12">
+                <h5 class="title"><i class="fa fa-location-arrow" aria-hidden="true"></i> Endereço</h5>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Endereço</label>
+                  <input type="text" class="form-control" placeholder="Endereço" value="">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 pr-1">
+                <div class="form-group">
+                  <label>Cidade</label>
+                  <input type="text" class="form-control" placeholder="Cidade" value="">
+                </div>
+              </div>
+              <div class="col-md-4 px-1">
+                <div class="form-group">
+                  <label>Pais</label>
+                  <input type="text" class="form-control" placeholder="Pais" value="">
+                </div>
+              </div>
+              <div class="col-md-4 pl-1">
+                <div class="form-group">
+                  <label>CEP</label>
+                  <input type="number" class="form-control" placeholder="">
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-5">
+              <div class="col-md-6">
+                <h5 class="title"><i class="fa fa-building" aria-hidden="true"></i> Cargo - Orgão</h5>
+              </div>
+
+              <div class="col-md-6 pl-1">
+                <div class="text-right bg-white p-t-10 p-l-10 p-r-10">
+                  <button type="submit" class="btn btn-primary btn-cons btn-320">Adicionar Cargo/Orgão</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 pr-1 p-5">
+                <table class="table">
+                  <thead class="text-primary">
+                     <th class="text-center"> Coluna 1 </th>
+                     <th class="text-center"> Coluna 2 </th>
+                     <th class="text-center"> Coluna 3 </th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center"> 123 </td>
+                      <td class="text-center"> 321 </td>
+                      <td class="text-center"> 231 </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center"> 1234 </td>
+                      <td class="text-center"> 3214 </td>
+                      <td class="text-center"> 2314 </td>
+                    </tr>
+                  </tbody>
+                </table>
+               </div>
+            </div>
+
+
+            <div class="row mt-5">
+              <div class="col-md-6">
+                <h5 class="title"><i class="fa fa-users" aria-hidden="true"></i> Vinculo</h5>
+              </div>
+
+              <div class="col-md-6 pl-1">
+                <div class="text-right bg-white p-t-10 p-l-10 p-r-10">
+                  <button type="submit" class="btn btn-primary btn-cons btn-320">Adicionar Vinculo</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 pr-1 p-5">
+                <table class="table">
+                  <thead class="text-primary">
+                  <th class="text-center"> Coluna 1 </th>
+                  <th class="text-center"> Coluna 2 </th>
+                  <th class="text-center"> Coluna 3 </th>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td class="text-center"> 123 </td>
+                    <td class="text-center"> 321 </td>
+                    <td class="text-center"> 231 </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center"> 1234 </td>
+                    <td class="text-center"> 3214 </td>
+                    <td class="text-center"> 2314 </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="text-right bg-white p-t-10 p-l-10 p-r-10">
+                  <button type="submit" class="btn btn-primary btn-cons btn-320">Salvar</button>
+                  <button type="button" class="btn btn-default btn-cons btn-320">Voltar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-user">
+        <div class="image">
+          <img src="../assets/img/bg5.jpg" alt="...">
+        </div>
+        <div class="card-body">
+          <div class="author">
+            <a href="#">
+              <img class="avatar border-gray" src="../assets/img/mike.jpg" alt="...">
+              <h5 class="title">{{!pessoa.utilizarNomeUsual ? pessoa.nomeCompleto : pessoa.nomeUsual}}</h5>
+            </a>
+            <p class="description">
+              {{pessoa.login}}
+            </p>
+          </div>
+          <p class="description text-center">
+            {{pessoa.sobre}}
+          </p>
+        </div>
+        <hr>
+        <div class="button-container">
+          <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+          <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+            <i class="fab fa-google-plus-g"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

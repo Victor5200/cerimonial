@@ -1,0 +1,49 @@
+# Banco de dados #
+info:
+  name: podce-adm
+
+url.db: @url.db@
+user.db: @user.db@
+password.db: @password.db@
+min.pool.db: @min.pool.db@
+max.pool.db: @max.pool.db@
+timeout.db: @timeout.db@
+
+dialect.db: org.hibernate.dialect.PostgreSQLDialect
+data.source.db: org.postgresql.ds.PGSimpleDataSource
+hbm2dll: none
+
+spring:
+  profiles:
+    active: dev
+  security:
+    user:
+      name: eureka
+      password: admin
+      roles: SYSTEM
+  servlet:
+    multipart:
+      enabled:true
+      file-size-threshold:2KB
+      max-file-size:7MB
+      max-request-size:10MB
+
+server:
+  port: @podce-adm-port@
+  servlet:
+    context-path: /podce-adm
+
+service:
+  defaultMinMs: 100
+  defaultMaxMs: 200
+
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+    lease-expiration-duration-in-seconds: 10
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+    defaultZone: http://localhost:8761/

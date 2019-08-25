@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>br.com.podce</groupId>
+    <artifactId>podce-pom-parent</artifactId>
+    <version>0.0.1</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>../podce-pom-parent</module>
+        <module>../podce-db-migration</module>
+        <module>../podce-lib</module>
+        <module>../podce-adm</module>
+        <module>../discovery</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.4.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <profiles>
+        <profile>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <id>local</id>
+            <properties>
+                <url.db>jdbc:postgresql://localhost:5432/postgres</url.db>
+                <user.db>postgres</user.db>
+                <password.db>postgres</password.db>
+                <timeout.db>10000</timeout.db>
+                <max.pool.db>30</max.pool.db>
+                <min.pool.db>5</min.pool.db>
+
+                <podce-adm-port>8083</podce-adm-port>
+                <url.app>http://localhost:3000/#/login/reset</url.app>
+
+                <!--<oauth.url>http://localhost</oauth.url> Para quando implementar o oauth
+                <oauth.port>9999</oauth.port>-->
+            </properties>
+        </profile>
+    </profiles>
+
+</project>
