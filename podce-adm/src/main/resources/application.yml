@@ -37,13 +37,21 @@ service:
   defaultMinMs: 100
   defaultMaxMs: 200
 
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+    com.howtodoinjava: DEBUG
+    org.hibernate: DEBUG
+
+
 eureka:
   instance:
     instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
     lease-expiration-duration-in-seconds: 10
     hostname: localhost
   client:
-    registerWithEureka: true
-    fetchRegistry: true
+    registerWithEureka: false
+    fetchRegistry: false
     serviceUrl:
-    defaultZone: http://localhost:8761/
+      defaultZone: http://localhost:8761/

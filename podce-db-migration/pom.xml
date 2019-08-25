@@ -27,13 +27,6 @@
                         <schema>podce</schema>
                     </schemas>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.postgresql</groupId>
-                        <artifactId>postgresql</artifactId>
-                        <version>42.2.4</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>

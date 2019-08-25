@@ -30,7 +30,7 @@
             </activation>
             <id>local</id>
             <properties>
-                <url.db>jdbc:postgresql://localhost:5432/postgres</url.db>
+                <url.db>jdbc:postgresql://127.0.0.1:5432/postgres</url.db>
                 <user.db>postgres</user.db>
                 <password.db>postgres</password.db>
                 <timeout.db>10000</timeout.db>

@@ -83,6 +83,18 @@ public class PersistenceConfig {
         hikariConfig.setPoolName("springHikariPodceCP");
         HikariDataSource dataSource = new HikariDataSource(hikariConfig);
         return dataSource;
+
+        /*HikariConfig hikariConfig = new HikariConfig();
+        hikariConfig.setDataSourceClassName(null);
+        hikariConfig.setDriverClassName("org.postgresql.Driver");
+        hikariConfig.setJdbcUrl(URL);
+        hikariConfig.setUsername(USER);
+        hikariConfig.setPassword(PW);
+        hikariConfig.setIdleTimeout(TIMEOUT);
+        hikariConfig.setMinimumIdle(MIN_POOL);
+        hikariConfig.setMaximumPoolSize(MAX_POOL);
+        hikariConfig.setPoolName("springHikariPodceCP");
+        return new HikariDataSource(hikariConfig);*/
     }
 
     @Primary
