@@ -6,19 +6,31 @@ export class MensagemFactory {
   }
 
   public publicaMensagemSucesso(textoMensagem: string): void {
-    Swal.fire('', textoMensagem, 'success');
+    const Toast = Swal.mixin({
+      toast: true,  position: 'top-end', showConfirmButton: false, timer: 3000
+    })
+    Toast.fire('', textoMensagem, 'success');
   }
 
   public publicaMensagemErro(textoMensagem: string): void {
-    Swal.fire('', textoMensagem, 'error');
+    const Toast = Swal.mixin({
+      toast: true,  position: 'top-end', showConfirmButton: false, timer: 3000
+    })
+    Toast.fire('', textoMensagem, 'error');
   }
 
   public publicaMensagemAviso(textoMensagem: string): void {
-    Swal.fire('', textoMensagem, 'warning');
+    const Toast = Swal.mixin({
+      toast: true,  position: 'top-end', showConfirmButton: false, timer: 3000
+    })
+    Toast.fire('', textoMensagem, 'warning');
   }
 
   public publicaMensagemInfo(textoMensagem: string): void {
-    Swal.fire('', textoMensagem, 'info');
+    const Toast = Swal.mixin({
+      toast: true,  position: 'top-end', showConfirmButton: false, timer: 3000
+    })
+    Toast.fire('', textoMensagem, 'info');
   }
 
   public publicaMensagemConfirmacao(titulo: string, texto: string): Promise<SweetAlertResult> {

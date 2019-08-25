@@ -1,8 +1,7 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {Pessoa, VinculoPessoa} from '../model';
-import swal from 'sweetalert2';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { FormModalComponent } from '../form-modal/form-modal.component';
+import {Pessoa} from '../model';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {FormModalComponent} from '../form-modal/form-modal.component';
 import {MensagemFactory} from '../Factorys/mensagemFactory';
 
 @Component({
@@ -16,8 +15,7 @@ export class UserProfileComponent implements OnInit {
   display = 'none';
 
   constructor(private cd: ChangeDetectorRef,
-              private modalService: NgbModal
-              ) { }
+              private modalService: NgbModal) { }
 
   ngOnInit() {
     this.pessoa.foto = '../assets/img/user.png';

@@ -7,6 +7,7 @@ import { UserProfileComponent } from '../../pessoa/user-profile.component';
 import { ChartsModule } from 'ng2-charts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
+import {VocativoComponent} from '../../vocativo/vocativo.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { ToastrModule } from 'ngx-toastr';
   ],
   declarations: [
     UserProfileComponent,
+    VocativoComponent,
   ]
 })
 
